@@ -6,17 +6,18 @@ function CallBackPrac() {
     const [counter, setCounter] = useState(0);
     const [ counterTwo, setCounterTwo] = useState(0);
 
-    const IncrementCounter = () => useCallback(() => {
+    const IncrementCounter = () => {
         setCounter(counter+1);
-    }, [counter]
-)
-    const Fun = () =>  {
-        console.log("fun")
     }
+
+    const Fun = useCallback(() =>  {
+     setCounterTwo(counterTwo+1)
+    }, [counterTwo])
+   
    
   return (
     <>
-    <CounterComp fun={Fun} />
+    <CounterComp counterTwo={counterTwo} fun={Fun}/>
     <button onClick={IncrementCounter}>Counter: {counter}</button>
     </>
   )
