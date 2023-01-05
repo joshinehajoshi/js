@@ -1,27 +1,12 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-function HocPrac() {
+const HocPrac = (Comp) => (props) => {
+    console.log("props", props)
   return (
       <>
-    <div>HocPrac</div>
-    <HOC comp={Counter}/>
+    <Comp {...props} />
     </>
   )
-}
-
-function HOC(props) {
-    return (
-        <>
-        <h2>New Hoc</h2>
-        <props.comp/>
-        </>
-    )
-}
-
-function Counter() {
-    return (
-        <button>Counter Button</button>
-    )
 }
 
 export default HocPrac
