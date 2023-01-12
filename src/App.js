@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       <MemoPrac />
       <CallBackPrac />
-      <CAUCPrac data="neha" />
+      <CAUCPrac data={["neha"]} />
+      <CAUCPrac data={["abcd"]} />
       <HocPrac />
     </div>
   );
